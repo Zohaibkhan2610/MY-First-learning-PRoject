@@ -1,0 +1,278 @@
+header {
+     display: flex;
+     top: 0;
+     left: 0;
+     position: fixed;
+     width: 100%;
+     padding: 20px 100px 20px 0px;
+     justify-content: space-between;
+     background: transparent;
+     align-items: center;
+     z-index: 99;
+}
+
+.logo {
+     color: aqua;
+     font-size: 1.6rem;
+     user-select: none;
+
+}
+
+.navigation a {
+     color: aqua;
+     position: relative;
+     font-size: 1.1rem;
+     text-decoration: none;
+     font-weight: 500;
+     margin-left: 40px;
+}
+
+.navigation a::after {
+     content: '';
+     position: absolute;
+     bottom: -6px;
+     left: 0;
+     width: 100%;
+     height: 3px;
+     background-color: #f61c1c;
+     border-radius: 5px;
+     transform: scaleX(0);
+     transform-origin: center;
+     transition: transform .5s;
+}
+
+.navigation a:hover::after {
+     transform: scaleX(1);
+}
+
+.navigation .btnlogin-popup {
+     color: aqua;
+     width: 130px;
+     height: 50px;
+     background-color: transparent;
+     outline: none;
+     border-radius: 6px;
+     border: 2px solid;
+     cursor: pointer;
+     font-size: 1.1rem;
+     margin-left: 40px;
+     font-weight: 500;
+     transition: 1s;
+
+}
+
+.navigation .btnlogin-popup:hover {
+     background-color: white;
+     color: #0bf057;
+}
+
+body {
+     background: url(img1.jpg) no-repeat;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     min-height: 100vh;
+     width: 100%;
+     background-size: cover;
+     background-position: center;
+     padding: 42px 0;
+}
+.lock {
+     height: 48px;
+     width: 55px;
+     margin-right: -16px;
+}
+.user-icon {
+     height: 54px;
+     width: 52px;
+     position: absolute;
+     right: -0.3em;
+}
+.wrapper .icon-close {
+     position: absolute;
+     top: 0;
+     right: 0;
+     height: 45px;
+     width: 45px;
+     background: aqua;
+     font-size: 2em;
+     color: white;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     border-radius: 5px 0 1px 15px ;
+
+}
+.wrapper{
+     position: relative;
+     width: 400px;
+     height: 440px;
+     background: transparent;
+     border: 2px solid aqua;
+     backdrop-filter: blur(20px);
+     box-shadow: black;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     transition: height .2s ease;
+     overflow: hidden;
+}
+.wrapper .from-box-login {
+     position: relative;
+     transition: transform .18s ease;
+     transform: translateX(0);
+}
+
+.from-box-login{
+     width: 100%;
+     padding: 40px;
+}
+.from-box-login h2 {
+     font-size: 2em;
+     color: aqua;
+     text-align: center;
+}
+.input-box{
+     position: relative;
+     width: 100%;
+     height: 50px;
+     border-bottom: 2px solid aqua;
+     margin: 30px 0;
+}
+.input-box label {
+     position: absolute;
+     top: 50%;
+     left: 5px;
+     transform: translateY(-50%);
+     font-size: 1em;
+     color: aqua;
+     font-weight: 500;
+     pointer-events: none;
+}
+.input-box input{
+     width: 100%;
+     height: 100%;
+     background: transparent;
+     border: none;
+     outline: none;
+     color: aqua;
+     font-size: larger;
+}
+.input-box .icon{
+     position: absolute;
+     right: 8px;
+     font-size: 1.2em;
+     color: aqua;
+     line-height: 57px;
+}
+.remember-forget{
+     font-size: .9em;
+     color: aqua;
+     margin: -15px 0 15px;
+     display: flex;
+     justify-content: space-between;
+}
+.remember-forget label input {
+     accent-color: aqua;
+     margin-right: 3px;
+}
+.remember-forget a {
+     color: aqua;
+     text-decoration: none;
+}
+.remember-forget a:hover{
+     text-decoration: underline;
+     transform-origin: center;
+     color: #0bf057;
+}
+.btn{
+     color: aqua;
+     width: 100%;
+     height: 45px;
+     background-color: transparent;
+     border: 2px solid aqua;
+     border-radius: 5px;
+     cursor: pointer;
+     font-size: 1em;
+     font-weight: 500  
+}
+.login-register{
+     display: flex;
+     font-size: .9em;
+     color: aqua;
+     text-align: center;
+     font-weight: 500;
+     margin: 25px 0 10px;
+     align-items: center;
+     justify-content: space-between;
+}
+.login-register p {
+     color: aqua;
+     text-decoration: none;
+     font-weight: 600;
+
+}
+.login-register a {
+     color: aqua;
+     font-size: larger;
+     text-decoration: none;
+}
+.login-register a:hover{
+     text-decoration: underline;
+     color: #0bf057;
+}
+.Username{
+     height: 41px;
+}
+.from-box-Register{
+     color: aqua;
+     align-items: center;
+     text-align: center;
+}
+.wrapper .from-box-Register {
+     position: absolute;
+     transform: translateX(400px);
+}
+.wrapper .from-box-Register {
+     transition: transform .18s ease;
+     transform: translateX(0);
+     transition: none
+}
+
+#rom-box-login{
+     display: none;
+}
+#from-box-Register{
+     display: none;
+}
+#wrapper{
+     display: none;
+}
+.Register-link{
+     background: transparent;
+     color: aqua;
+     font-size: 1.5em;
+     border: none;
+}
+.Register-link:hover{
+     background: transparent;
+     color: greenyellow;
+     text-decoration: underline;
+     font-size: 1.5em;
+     border: none;
+     transition: 2s;
+}
+.login-link{
+     background: transparent;
+     color: aqua;
+     font-size: 1.5em;
+     border: none;
+}
+.login-link:hover{
+     background: transparent;
+     color: greenyellow;
+     text-decoration: underline;
+     font-size: 1.5em;
+     border: none;
+     transition: 2s;
+}

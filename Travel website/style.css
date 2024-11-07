@@ -1,0 +1,253 @@
+* {
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+}
+
+body {
+     background: url(Images/img1.jpg) no-repeat;
+     background-size: cover;
+     background-position: center;
+     min-height: 100vh;
+}
+
+header {
+     background-color: black;
+     position: fixed;
+     top: 0;
+     left: 0;
+     height: 50px;
+     width: 100%;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     z-index: 100;
+     margin-left: 10px;
+     padding: 10px;
+}
+
+#logo {
+     color: white;
+     font-size: 25px;
+     text-decoration: none;
+     font-weight: 600;
+}
+
+#com {
+     color: red;
+     font-size: 25px;
+     text-decoration: none;
+     font-weight: 500;
+}
+
+nav {
+     display: flex;
+     margin: 0 10px;
+}
+#menu-icon{
+     display: none;
+}
+nav a {
+     display: inline-block;
+     justify-content: space-between;
+     margin: 0 30px;
+     text-decoration: none;
+     text-align: center;
+     color: white;
+     position: relative;
+}
+nav a:hover{
+     color: rgb(237, 144, 6);
+     transition: 1s;
+}
+
+nav a::after {
+     content: "";
+     text-decoration: underline;
+     background-color: rgb(237, 144, 6);
+     position: absolute;
+     left: 0;
+     bottom: -6px;
+     width: 0%;
+     height: 3px;
+     transition: all 1s ease;
+}
+
+nav a:hover::after {
+     width: 100%;
+     color: rgb(237, 144, 6);
+
+}
+
+.container {
+     color: aliceblue;
+}
+
+.content {
+     position: relative;
+     height: 100vh;
+     max-width: calc(var(max-width)/2);
+     margin-inline: auto;
+     padding: 128px 16px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-direction: column;
+     text-align: center;
+     isolation: isolate;
+}
+
+.content::before {
+     position: absolute;
+     content: "";
+     top: 0;
+     right: 0;
+     width: 100vw;
+     height: 100%;
+     background-color: rgb(1, 19, 27, 0.9);
+     z-index: -1;
+}
+
+.content h1 {
+     color: white;
+     font-size: 64px;
+     line-height: 64px;
+     margin-bottom: 32px;
+     line-height: 64px;
+     font-weight: 700;
+}
+
+.content h2 {
+     color: white;
+     font-size: 48px;
+     margin-bottom: 32px;
+     line-height: 64px;
+     font-weight: 600;
+}
+
+.content h3 {
+     color: white;
+     font-size: 32px;
+     font-weight: 700;
+     line-height: 32px;
+     margin-bottom: 32px;
+}
+
+.content p {
+     color: white;
+     font-size: 16px;
+     font-weight: 500;
+     line-height: 32px;
+     margin-bottom: 32px;
+}
+
+.content form {
+     margin-bottom: 32px;
+     width: 100%;
+     background-color: white;
+     max-width: 450px;
+     margin-inline: auto;
+     display: flex;
+     align-items: center;
+     border-radius: 6px;
+}
+
+.content form input {
+     width: 100%;
+     padding: 8px 12px;
+     font-size: 16px;
+     border: none;
+     color: black;
+     background-color: transparent;
+}
+
+.content form button {
+     font-size: 23px;
+     padding: 5px 20px;
+     color: white;
+     outline: none;
+     border: none;
+     border-radius: 6px;
+     background-color: rgb(237, 144, 6);
+     cursor: pointer;
+}
+
+.contact {
+     display: flex;
+     justify-content: space-between;
+     margin: 10px;
+     padding: 0 10px;
+}
+
+.contact a {
+     font-size: 32px;
+     text-decoration: none;
+     /* border: 2px solid;
+     border-radius: 46px ; */
+     justify-content: space-between;
+     margin-left: 40px;
+     color: white;
+     align-items: center;
+     text-align: center;
+     justify-content: center;
+     padding: 10px;
+     position: relative;
+     z-index: 100;
+     align-items: center;
+     text-align: center;
+}
+.contact a::after{
+     content: '';
+     position: absolute;
+     width: 0%;
+     height: 100%;
+     left: 0;
+     bottom: 1px;
+     border-radius: 41px;
+     transform-origin: 1s;
+     transition: 1s;
+     z-index: -1;
+}
+.contact a:hover::after{
+     width: 100%;
+     background-color: rgb(237, 144, 6);
+}
+
+@media (width < 643px) {
+
+     #logo,
+     #com {
+          font-size: 18px;
+     }
+
+     #nav-link {
+          display: block;
+          position: relative;
+          width: 80px;
+          top: 0;
+          right: 0;
+          margin-right: 60px;
+          margin-top: 102px;
+          width: 60%;
+
+     }
+
+     #menu-icon {
+          font-size: 23px;
+          position: absolute;
+          margin: 0 12px 0 80%;
+          text-decoration: none;
+     }
+
+     .content h1 {
+          font-size: 33px;
+     }
+
+     .content h2 {
+          font-size: 28px;
+     }
+
+     .content h3 {
+          font-size: 25px;
+     }
+}
